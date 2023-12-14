@@ -1,3 +1,5 @@
 # Example of dynamically adding an axis in the Syncfusion Blazor Circular Gauge component
 
 In this Blazor project, we created a sample to show how to add an axis dynamically in the Blazor Circular Gauge.
+
+In this example, we created a button labelled "Add Axis". When this button is clicked, it triggers the AddClick() method. In this method, we pushed the value of 200 to the list. In order to represent the maximum value for the gauge axes. The value from the list can be set in the [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Maximum) property of a [CircularGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html). Now, the CircularGaugeAxis tag is used inside an iterative condition to add the axes dynamically.
