@@ -1,0 +1,33 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.CircularGauge;
+
+<Syncfusion.Blazor.Buttons.SfButton CssClass="e-btn e-info" Content="Add Axis" @onclick="AddClick"></Syncfusion.Blazor.Buttons.SfButton>
+<SfCircularGauge>
+    <CircularGaugeAxes>
+        @foreach (var axis in Axes)
+        {
+            <CircularGaugeAxis>
+                <CircularGaugeAxisLineStyle Width="2" Color="#9E9E9E" />
+                <CircularGaugeAxisMajorTicks Offset="5" />
+                <CircularGaugeAxisMinorTicks Offset="5" />
+            </CircularGaugeAxis>
+        }
+    </CircularGaugeAxes>
+</SfCircularGauge>
+
+
+
+@code {
+    private List<CircularGaugeAxis> Axes = new List<CircularGaugeAxis>();
+
+    protected override void OnInitialized()
+    {
+        Axes.Add(new CircularGaugeAxis());
+    }
+
+    public void AddClick()
+    {
+        Axes.Add(new CircularGaugeAxis());
+    }
+}
