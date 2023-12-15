@@ -1,0 +1,30 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.CircularGauge;
+@using Syncfusion.Blazor.Buttons;
+
+<SfButton CssClass="e-btn e-info" Content="Add Axis" @onclick="AddClick"></SfButton>
+<SfCircularGauge>
+    <CircularGaugeAxes>
+        @foreach (var maximum in AxesMaximum)
+        {
+            <CircularGaugeAxis Maximum="maximum">
+                <CircularGaugeAxisLineStyle Width="2" Color="#9E9E9E" />
+                <CircularGaugeAxisMajorTicks Offset="5" />
+                <CircularGaugeAxisMinorTicks Offset="5" />
+            </CircularGaugeAxis>
+        }
+    </CircularGaugeAxes>
+</SfCircularGauge>
+
+
+
+@code {
+    private List<int> AxesMaximum = new() { 100 };
+   
+
+    public void AddClick()
+    {
+        AxesMaximum.Add(200);
+    }
+}
