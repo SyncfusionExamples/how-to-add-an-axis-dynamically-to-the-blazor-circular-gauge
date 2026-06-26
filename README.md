@@ -1,4 +1,4 @@
-# Dynamic Blazor Circular Gauge Axes
+# Dynamically adding an axis in the Blazor Circular Gauge component
 
 A Blazor sample demonstrating how to dynamically add multiple axes to the [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component. This example shows component re-rendering based on data changes and provides a foundation for building interactive gauge applications.
 
